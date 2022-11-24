@@ -29,7 +29,7 @@ public static class ConanRconFunctions
         try
         {
             var result = await ExecuteCommand(host, port, password, command);
-            log.LogInformation($"");
+            log.LogInformation($"[{DateTime.Now}] {result}");
         }
         catch (Exception e)
         {
@@ -70,6 +70,7 @@ public static class ConanRconFunctions
         {
             var portNo = int.TryParse(port, out var tmpPort) ? tmpPort : 27056;
             var result = await ExecuteCommand(host, portNo, password, command);
+            log.LogInformation($"[{DateTime.Now}] {result}");
             return new OkObjectResult($"[{DateTime.Now}]\n\n{result}");
         }
         catch (Exception e)
