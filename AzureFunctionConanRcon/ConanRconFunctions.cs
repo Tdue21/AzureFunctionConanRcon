@@ -24,7 +24,7 @@ public static class ConanRconFunctions
         var host = GetEnvironmentVariable("host", "203.17.245.244");
         var port = GetEnvironmentVariable("port", 27056);
         var password = GetEnvironmentVariable("pwd", "o435c");
-        var command = GetEnvironmentVariable("command", "listplayers");
+        var command = GetEnvironmentVariable("rconcmd", "listplayers");
 
         try
         {
@@ -63,7 +63,7 @@ public static class ConanRconFunctions
         var command = req.Query["command"].ToString();
         if (string.IsNullOrWhiteSpace(command))
         {
-            command = GetEnvironmentVariable("command", "listplayers");
+            command = GetEnvironmentVariable("rconcmd", "listplayers");
         }
 
         try
