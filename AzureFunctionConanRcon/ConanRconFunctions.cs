@@ -13,7 +13,7 @@ public static class ConanRconFunctions
 #if DEBUG
     private const string TimerExpression = "*/30 * * * * *";
 #else
-        private const string TimerExpression = "0 55 6 * * *";
+        private const string TimerExpression = "0 55 5 * * *";
 #endif
 
     [FunctionName("conan-timer")]
